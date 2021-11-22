@@ -659,6 +659,63 @@ class Point2DWallEnv(Point2DEnv):
         if wall_shape == "none":
             self.walls = []
 
+        # New, harder wall config
+        if wall_shape == "hard-u":
+            # Big U
+            self.walls = [
+            # Outter Walls
+                # Right wall
+                VerticalWall(
+                    self.ball_radius,
+                    self.inner_wall_max_dist*2,
+                    -self.inner_wall_max_dist*2,
+                    self.inner_wall_max_dist,
+                    self.wall_thickness
+                ),
+                # Left wall
+                VerticalWall(
+                    self.ball_radius,
+                    -self.inner_wall_max_dist*2,
+                    -self.inner_wall_max_dist*2,
+                    self.inner_wall_max_dist,
+                    self.wall_thickness
+                ),
+                # Bottom wall
+                HorizontalWall(
+                    self.ball_radius,
+                    self.inner_wall_max_dist,
+                    -self.inner_wall_max_dist*2,
+                    self.inner_wall_max_dist*2,
+                    self.wall_thickness
+                ),
+            # Inner Walls
+                # Right Wall
+                VerticalWall(
+                    self.ball_radius,
+                    self.inner_wall_max_dist,
+                    -self.inner_wall_max_dist*2.5,
+                    0,
+                    self.wall_thickness
+                ),
+                # Left wall
+                VerticalWall(
+                    self.ball_radius,
+                    -self.inner_wall_max_dist,
+                    -self.inner_wall_max_dist*2.5,
+                    0,
+                    self.wall_thickness
+                ),
+                # Bottom wall
+                HorizontalWall(
+                    self.ball_radius,
+                    -self.inner_wall_max_dist*2.5,
+                    -self.inner_wall_max_dist,
+                    self.inner_wall_max_dist,
+                    self.wall_thickness
+                ),
+            ]
+
+
     def generate_expert_subgoals(self, num_subprobs):
         def avg(p1, p2):
             return [(p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2]
