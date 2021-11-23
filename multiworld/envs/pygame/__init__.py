@@ -297,7 +297,7 @@ def register_soroush_u_wall_envs():
         kwargs={
             'action_scale': 0.15,
             'wall_shape': 'hard-u',
-            'wall_thickness': 0.50,
+            'wall_thickness': 0.25,
             'render_target': False,
             'render_size': 84,
             'images_are_rgb': True,
