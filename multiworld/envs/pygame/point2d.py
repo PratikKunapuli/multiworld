@@ -667,7 +667,7 @@ class Point2DWallEnv(Point2DEnv):
                 # Right wall
                 VerticalWall(
                     self.ball_radius,
-                    self.inner_wall_max_dist*2,
+                    self.inner_wall_max_dist*3,
                     -self.inner_wall_max_dist*2,
                     self.inner_wall_max_dist,
                     self.wall_thickness
@@ -675,7 +675,7 @@ class Point2DWallEnv(Point2DEnv):
                 # Left wall
                 VerticalWall(
                     self.ball_radius,
-                    -self.inner_wall_max_dist*2,
+                    -self.inner_wall_max_dist*3,
                     -self.inner_wall_max_dist*2,
                     self.inner_wall_max_dist,
                     self.wall_thickness
@@ -684,8 +684,8 @@ class Point2DWallEnv(Point2DEnv):
                 HorizontalWall(
                     self.ball_radius,
                     self.inner_wall_max_dist,
-                    -self.inner_wall_max_dist*2,
-                    self.inner_wall_max_dist*2,
+                    -self.inner_wall_max_dist*3,
+                    self.inner_wall_max_dist*3,
                     self.wall_thickness
                 ),
             # Inner Walls
@@ -693,7 +693,7 @@ class Point2DWallEnv(Point2DEnv):
                 VerticalWall(
                     self.ball_radius,
                     self.inner_wall_max_dist,
-                    -self.inner_wall_max_dist*2.5,
+                    -self.inner_wall_max_dist*3,
                     0,
                     self.wall_thickness
                 ),
@@ -701,14 +701,14 @@ class Point2DWallEnv(Point2DEnv):
                 VerticalWall(
                     self.ball_radius,
                     -self.inner_wall_max_dist,
-                    -self.inner_wall_max_dist*2.5,
+                    -self.inner_wall_max_dist*3,
                     0,
                     self.wall_thickness
                 ),
                 # Bottom wall
                 HorizontalWall(
                     self.ball_radius,
-                    -self.inner_wall_max_dist*2.5,
+                    -self.inner_wall_max_dist*3,
                     -self.inner_wall_max_dist,
                     self.inner_wall_max_dist,
                     self.wall_thickness
