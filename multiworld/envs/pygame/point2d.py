@@ -694,7 +694,7 @@ class Point2DWallEnv(Point2DEnv):
                     self.ball_radius,
                     self.inner_wall_max_dist,
                     -self.inner_wall_max_dist*3,
-                    0,
+                    -self.inner_wall_max_dist,
                     self.wall_thickness
                 ),
                 # Left wall
@@ -702,7 +702,7 @@ class Point2DWallEnv(Point2DEnv):
                     self.ball_radius,
                     -self.inner_wall_max_dist,
                     -self.inner_wall_max_dist*3,
-                    0,
+                    -self.inner_wall_max_dist,
                     self.wall_thickness
                 ),
                 # Bottom wall
