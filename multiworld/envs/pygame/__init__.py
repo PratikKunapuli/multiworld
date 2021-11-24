@@ -304,6 +304,7 @@ def register_soroush_u_wall_envs():
             'sample_realistic_goals': True,
             'norm_order': 2,
             'reward_type': 'dense',
+            'boundary_dist': 5,
         }
     )
     register(
@@ -399,6 +400,7 @@ def register_soroush_u_wall_envs():
             'ball_high': (2, 1),
             'goal_low': (-4, 2),
             'goal_high': (4, 4),
+            'boundary_dist': 5,
         }
     )
 
