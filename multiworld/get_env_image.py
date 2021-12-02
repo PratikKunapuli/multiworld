@@ -1,7 +1,7 @@
 import gym
 import matplotlib.pyplot as plt
 
-env = gym.make("Image48PointmassUWallTrainEnvHard-v1")
+env = gym.make('Image48PointmassUWallTrainEnvHard-v1')
 
 env.reset()
 frame = env.render(mode="rgb_array")
