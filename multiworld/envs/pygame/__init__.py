@@ -354,6 +354,16 @@ def register_soroush_u_wall_envs():
         },
     )
 
+     # NEW 
+    register(
+        id='Image84PointmassUWallTrainEnvHard-v1',
+        entry_point=create_image_84_pointmass_uwall_train_env_hard_v1,
+        tags={
+            'git-commit-hash': 'e5c11ac',
+            'author': 'Pratik'
+        },
+    )
+
     register(
         id='PointmassUWallTestEnvBig-v1',
         entry_point='multiworld.envs.pygame.point2d:Point2DWallEnv',
@@ -1089,6 +1099,20 @@ def create_image_48_pointmass_uwall_train_env_hard_v1():
     return ImageEnv(
         wrapped_env,
         48,
+        init_camera=None,
+        transpose=True,
+        normalize=True,
+        non_presampled_goal_img_is_garbage=False,
+    )
+
+# NEW
+def create_image_84_pointmass_uwall_train_env_hard_v1():
+    from multiworld.core.image_env import ImageEnv
+
+    wrapped_env = gym.make('PointmassUWallTrainEnvHard-v1')
+    return ImageEnv(
+        wrapped_env,
+        84,
         init_camera=None,
         transpose=True,
         normalize=True,

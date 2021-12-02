@@ -46,6 +46,10 @@ class AntMazeEnv(AntEnv):
         ]:
             self.maze_type = 'u-long'
         elif model_path in [
+            'classic_mujoco/ant_gear10_dt3_u_hard.xml', # need to create these xml files.
+            'classic_mujoco/ant_gear15_dt3_u_hard.xml',
+        ]:
+        elif model_path in [
             'classic_mujoco/ant_gear10_dt3_no_walls_long.xml',
             'classic_mujoco/ant_gear15_dt3_no_walls_long.xml',
         ]:
